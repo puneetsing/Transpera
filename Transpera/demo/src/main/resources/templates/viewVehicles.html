@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>My Vehicles</title>
+
+    <link rel="stylesheet" th:href="@{/css/viewVehicles.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+</head>
+
+
+<body>
+
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+
+        <h2>
+            🚗 Transpera
+        </h2>
+
+
+        <a href="/dashboard">
+            Dashboard
+        </a>
+
+        <a href="/addVehicles">
+            Add Vehicle
+        </a>
+
+        <a href="/viewVehicles" class="active">
+            View Vehicles
+        </a>
+
+        <a href="/profile">
+            Profile
+        </a>
+
+        <a href="/logout">
+            Logout
+        </a>
+
+
+    </div>
+
+
+
+
+
+    <!-- Main -->
+
+    <div class="main">
+
+
+        <h1>
+            My Vehicles
+        </h1>
+
+        <div class="vehicle-card" th:each="vehicle:${vehicles}">
+
+            <div class="vehicle-header">
+
+                <h2 th:text="${vehicle.vehicleName}">Mahindra Thar</h2>
+                <!-- Edit -->
+                <div class="action-buttons">
+
+                    <a th:href="@{/editVehicle/{id}(id=${vehicle.id})}" class="edit-btn">
+                        <i class="fa-solid fa-pen"></i> Edit
+                    </a>
+
+                    <a th:href="@{/deleteVehicle/{id}(id=${vehicle.id})}" class="delete-btn"
+                        onclick="return confirm('Delete this vehicle?')">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="info-row">
+
+                <div class="field">
+
+                    <span class="icon">
+                        🚙
+                    </span>
+
+                    Type
+
+                </div>
+
+
+                <div class="data" th:text="${vehicle.vehicleType}">
+                    bike
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="info-row">
+
+                <div class="field">
+
+                    <span class="icon">
+                        #
+                    </span>
+
+                    Number
+
+                </div>
+
+
+                <div class="data" th:text="${vehicle.vehicleNumber}">
+                    UP16DH5811
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="info-row">
+
+                <div class="field">
+
+                    <span class="icon">
+                        ▦
+                    </span>
+
+                    Brand
+
+                </div>
+
+
+                <div class="data" th:text="${vehicle.vehicleBrand}">
+                    maruti suzuki
+                </div>
+
+
+            </div>
+
+            <div class="info-row">
+
+                <div class="field">
+
+                    <span class="icon">
+                        🏷
+                    </span>
+
+                    Model
+
+                </div>
+
+
+                <div class="data" th:text="${vehicle.vehicleModel}">
+                    2022
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="info-row">
+
+                <div class="field">
+
+                    <span class="icon">
+                        ⛽
+                    </span>
+
+                    Fuel
+
+                </div>
+
+
+                <div class="data" th:text="${vehicle.fuelType}">
+                    Petrol
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="info-row">
+
+                <div class="field">
+
+                    <span class="icon">
+                        ◴
+                    </span>
+
+                    Driven KM
+
+                </div>
+
+
+                <div class="data" th:text="${vehicle.drivenKM}">
+                    678657
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="info-row">
+
+
+                <div class="field">
+
+                    <span class="icon">
+                        ⓘ
+                    </span>
+
+                    Status
+
+                </div>
+
+
+                <span class="status" th:text="${vehicle.status}">
+                    Inactive
+                </span>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <button class="details-btn">
+
+            View Details
+
+        </button>
+
+
+
+        <button class="dashboard-btn">
+
+            Dashboard
+
+        </button>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

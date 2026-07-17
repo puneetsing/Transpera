@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Vehicle</title>
+    <link rel="stylesheet" href="/css/addVehicles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>
+            🚗 Transpera
+        </h2>
+
+        <a href="/dashboard">Dashboard</a>
+        <a href="/addVehicles">Add Vehicle</a>
+        <a href="/viewVehicles">View Vehicles</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+
+    <div class="main-content">
+
+        <div class="card">
+
+            <h1>Add Vehicle</h1>
+
+            <form action="/addVehicles" object="${vehicle}" method="post">
+
+                <label>Vehicle Name</label>
+                <input type="text" name="vehicleName" required>
+
+                <label>Vehicle Type</label>
+                <select name="vehicleType" class="form-control" required>
+                    <option value="Car">Car</option>
+                    <option value="bike">bike</option>
+                    <option value="Truck">Truck</option>
+                    <option value="Bus">Bus</option>
+                </select>
+                <label>Vehicle Number</label>
+                <input type="text" name="vehicleNumber" required>
+
+                <label>KM Driven</label>
+                <input type="number" name="drivenKM" required>
+
+                <label>Vehicle Brand</label>
+                <input type="text" name="vehicleBrand" required>
+
+                <label>Vehicle Model</label>
+                <input type="text" name="vehicleModel" required>
+
+                <label>Fueltype</label>
+                <select id="fuelType" name="fuelType" class="form-control" required>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                    <option value="CNG">CNG</option>
+                </select>
+
+
+                <label>Status</label>
+                <select id="status" name="status" class="form-control" required>
+                    <option value="Active">Active</option>
+                    <option value="under Maintenance">under Maintenance</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+
+                <button type="submit">
+                    Save Vehicle
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
