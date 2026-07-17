@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Transpera Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>
+            🚗 Transpera
+        </h2>
+        <a href="/dashboard">
+            Dashboard
+        </a>
+
+        <a href="/addVehicles">
+            Add Vehicle
+        </a>
+
+        <a href="/viewVehicles">
+            View Vehicles
+        </a>
+
+        <a href="/profile">
+            Profile
+        </a>
+
+        <a href="/logout">
+            Logout
+        </a>
+    </div>
+
+
+    <div class="main-content">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Your JS -->
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Edit Vehicle</title>
+    <link rel="stylesheet" th:href="@{/css/editVehicle.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>
+            🚗 Transpera
+        </h2>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/addVehicles">Add Vehicles</a>
+        <a href="/viewVehicles">View Vehicles</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Log Out</a>
+    </div>
+    <div class="main-content">
+        <h1>
+            Edit Vehicle
+        </h1>
+        <form action="/updateVehicle" method="post">
+            <input type="hidden" name="id" th:value="${vehicle.id}">
+            <label>Vehicle Name</label>
+            <input type="text" name="vehicleName" th:value="${vehicle.vehicleName}">
+            <label>Vehicle Type</label>
+            <input type = "text" name = "vehicleType" th:value="${vehicle.vehicleType}">
+            <label>Vehicle Number</label>
+            <input type="text" name="vehicleNumber" th:value="${vehicle.vehicleNumber}">
+            <label>Brand</label>
+            <input type="text" name="vehicleBrand" th:value="${vehicle.vehicleBrand}">
+            <label>Model</label>
+            <input type="text" name="vehicleModel" th:value="${vehicle.vehicleModel}">
+            <label>KM Driven</label>
+            <input type="number" name="drivenKM" th:value="${vehicle.drivenKM}">
+            <label>Status</label>
+            <select name="status">
+                <option value="ACTIVE">
+                    Active
+                </option>
+                <option value="MAINTENANCE">
+                    Maintenance
+                </option>
+                <option value="INACTIVE">
+                    Inactive
+                </option>
+            </select>
+            <button type="submit">
+                Update Vehicle
+            </button>
+        </form>
+    </div>
+</body>
+</html>
