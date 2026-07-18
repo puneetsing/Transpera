@@ -1,23 +1,23 @@
-# 🚚 Transpera
+# Transpera
 
 Transpera is a Java Spring Boot based Vehicle Management and Tracking System designed to simplify fleet management for businesses and vehicle owners. It provides an intuitive dashboard for managing vehicles, monitoring fleet information, and maintaining organized vehicle records through a secure web application.
 
 ---
 
-## 📌 Features
+## Features
 
-- 🔐 User Registration & Login
-- 🚗 Vehicle Management (CRUD Operations)
-- 📊 Interactive Dashboard
-- 🗺️ OpenStreetMap Integration using Leaflet
-- 👤 User-Vehicle Relationship (One-to-Many)
-- 🛢️ Database Integration with JPA/Hibernate
-- 🎨 Responsive User Interface
-- 📍 Vehicle Location Visualization
+-  User Registration & Login
+-  Vehicle Management (CRUD Operations)
+-  Interactive Dashboard
+- OpenStreetMap Integration using Leaflet
+-  User-Vehicle Relationship (One-to-Many)
+-  Database Integration with JPA/Hibernate
+-  Responsive User Interface
+-  Vehicle Location Visualization
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 - Java 17
@@ -47,7 +47,7 @@ Transpera is a Java Spring Boot based Vehicle Management and Tracking System des
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Transpera
@@ -67,7 +67,7 @@ Transpera
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### Clone Repository
 
@@ -111,7 +111,7 @@ from your IDE.
 
 ---
 
-## 📸 Screens
+##  Screens
 
 - Login Page
 - Registration Page
@@ -124,7 +124,7 @@ from your IDE.
 
 ---
 
-## 🏗️ Current Modules
+## Current Modules
 
 - User Authentication
 - Vehicle CRUD
@@ -136,7 +136,7 @@ from your IDE.
 
 ---
 
-## 🚀 Upcoming Features
+## Upcoming Features
 
 - JWT Authentication
 - Spring Security
@@ -157,13 +157,13 @@ from your IDE.
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 The objective of Transpera is to build a scalable fleet management platform that helps businesses efficiently manage vehicles, monitor fleet operations, and improve transportation workflows. The long-term vision is to evolve Transpera into a complete logistics ecosystem connecting fleet owners, drivers, and customers through a digital marketplace.
 
 ---
 
-## 📚 Learning Outcomes
+## Learning Outcomes
 
 Through this project, I gained practical experience in:
 
@@ -179,7 +179,7 @@ Through this project, I gained practical experience in:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, suggestions, and feedback are welcome.
 
@@ -191,7 +191,7 @@ Contributions, suggestions, and feedback are welcome.
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Puneet Singh**
 Email: punitsingh1332005@gmail.com
@@ -199,6 +199,6 @@ GitHub: https://github.com/puneetsing
 
 ---
 
-## ⭐ Support
+## Support
 
 If you found this project helpful, please consider giving it a ⭐ on GitHub.
