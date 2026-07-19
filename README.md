@@ -33,13 +33,13 @@ Transpera is a Java Spring Boot based Vehicle Management and Tracking System des
 - JavaScript
 
 ### Database
-- MySQL
+- PostgreSQL
 
 ### Tools
 - Maven
 - Git
 - GitHub
-- IntelliJ IDEA / VS Code
+- VS Code
 
 ### Maps
 - OpenStreetMap
