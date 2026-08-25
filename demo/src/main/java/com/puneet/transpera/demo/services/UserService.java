@@ -32,7 +32,7 @@ public class UserService {
             String password
     ) {
         User user = userRepository.findByUsername(username);
-        if (user == null) {
+        if (user == null || user.getUsername() == null) {
             return null;
         }
         if(user.getPassword().equals(password)){
