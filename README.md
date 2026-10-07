@@ -91,8 +91,6 @@ Update your `application.properties`.
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/transpera
-spring.datasource.username=your_username
-spring.datasource.password=your_password
 ```
 
 ### Run Project
