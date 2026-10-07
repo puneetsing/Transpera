@@ -2,96 +2,47 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Transpera Dashboard</title>
-    <link rel="stylesheet" href="/css/dashboard.css">
-    <link rel="stylesheet" href="/css/sidebar.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+          href="/css/dashboard.css">
+
+    <!-- Sidebar CSS -->
+    <!--<link rel="stylesheet"
+          href="/css/sidebar.css"> -->
+
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 
+
 <body>
-    <!-- Menu Button -->
-<button id="menuButton" class="menu-button">
-    ☰
-</button>
+
+<div th:replace="fragments/sidebar :: sidebar"></div>
+
+<div id="map">
+    
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script src="/js/dashboard.js">
+</script>
+
+<!--<script src="/js/sidebar.js">
+</script>-->
 
 
-<!-- Overlay -->
-<div id="sidebarOverlay" class="sidebar-overlay"></div>
-
-
-<!-- Sidebar Drawer -->
-<aside id="sidebar" class="sidebar">
-
-    <div class="sidebar-header">
-
-        <div class="brand">
-            <span class="brand-icon">🚗</span>
-
-            <div>
-                <h2>Transpera</h2>
-                <span>Vehicle Management</span>
-            </div>
-        </div>
-
-        <button id="closeSidebar" class="close-sidebar">
-            &times;
-        </button>
-
-    </div>
-
-
-    <nav class="sidebar-nav">
-
-        <a href="/dashboard" class="nav-item active">
-            <span class="nav-icon">⌂</span>
-            <span>Dashboard</span>
-        </a>
-
-        <a href="#" id="openAddVehicle" class="nav-item">
-            <span class="nav-icon">＋</span>
-            <span>Add Vehicle</span>
-        </a>
-
-        <a href="/viewVehicles" class="nav-item">
-            <span class="nav-icon">🚚</span>
-            <span>Vehicles</span>
-        </a>
-
-        <a href="/profile" class="nav-item">
-            <span class="nav-icon">♙</span>
-            <span>Profile</span>
-        </a>
-
-        <a href="/settings" class="nav-item">
-            <span class="nav-icon">⚙</span>
-            <span>Settings</span>
-        </a>
-
-    </nav>
-
-
-    <div class="sidebar-bottom">
-
-        <a href="/logout" class="nav-item logout">
-            <span class="nav-icon">↪</span>
-            <span>Logout</span>
-        </a>
-
-    </div>
-
-</aside>
-
-    <div class="main-content">
-        <div class="map-container">
-            <div id="map"></div>
-        </div>
-    </div>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Your JS -->
-    <script src="/js/dashboard.js"></script>
-    <script src="/js/sidebar.js"></script>
 </body>
 
 </html>

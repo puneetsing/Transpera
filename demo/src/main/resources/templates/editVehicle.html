@@ -8,16 +8,140 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <h2>
-            🚗 Transpera
-        </h2>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/addVehicles">Add Vehicles</a>
-        <a href="/viewVehicles">View Vehicles</a>
-        <a href="/profile">Profile</a>
-        <a href="/logout">Log Out</a>
+    <aside id="sidebar"
+       class="sidebar">
+
+
+    <!-- Sidebar Header -->
+
+    <div class="sidebar-header">
+
+        <div class="brand">
+
+            <span class="brand-icon">
+                🚗
+            </span>
+
+            <div>
+
+                <h2>
+                    Transpera
+                </h2>
+
+                <span>
+                    Vehicle Management
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button id="closeSidebar"
+                class="close-sidebar">
+
+            &times;
+
+        </button>
+
     </div>
+
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+
+        <a href="/dashboard"
+           class="nav-item active">
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <a href="/addVehicles"
+           id="openAddVehicle"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ＋
+            </span>
+
+            <span>
+                Add Vehicle
+            </span>
+
+        </a>
+
+
+
+        <a href="/viewVehicles"
+           class="nav-item">
+
+            <span class="nav-icon">
+                🚚
+            </span>
+
+            <span>
+                Vehicles
+            </span>
+
+        </a>
+
+
+
+        <a href="/profile"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ♙
+            </span>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+        <a href="/settings"
+           class="nav-item">
+
+            <span class="nav-icon">
+                ⚙
+            </span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="/logout"
+           class="nav-item logout">
+            <span class="nav-icon">
+                ↪
+            </span>
+            <span>
+                Logout
+            </span>
+        </a>
+    </div>
+
+</aside>
+
     <div class="main-content">
         <h1>
             Edit Vehicle
