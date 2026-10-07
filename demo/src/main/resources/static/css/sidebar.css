@@ -1,41 +1,270 @@
+/* =========================
+   SIDEBAR DRAWER
+   ========================= */
 
-/* Sidebar */
-.sidebar{
-position:fixed;
-left:0;
-top:0;
-width:270px;
-height:100vh;
-background:#111827;
-padding:25px;
-box-sizing:border-box;
-color:white;
-}
+.sidebar {
+    position: fixed;
 
-.sidebar h2{
-color:#2563eb;
-font-size:28px;
-margin-bottom:45px;
-}
+    top: 0;
+    left: 0;
 
-.sidebar a{
-display:block;
-padding:15px;
-margin:12px 0;
-border-radius:8px;
-color:white;
-text-decoration:none;
-font-size:17px;
-transition:.3s;
-}
+    width: 270px;
+    height: 100vh;
 
-.sidebar a:hover{
-background:#374151;
-transform:translateX(8px);
-}
+    background: #0B0F19;
 
-.sidebar .active{
-background:#2563eb;
+    border-right: 1px solid #1E293B;
+
+    z-index: 3000;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    box-sizing: border-box;
 }
 
 
+/* OPEN SIDEBAR */
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+
+/* =========================
+   SIDEBAR HEADER
+   ========================= */
+
+.sidebar-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.brand-icon {
+
+    font-size: 28px;
+}
+
+
+.brand h2 {
+
+    margin: 0;
+
+    color: #F8FAFC;
+
+    font-size: 21px;
+}
+
+
+.brand span {
+
+    color: #94A3B8;
+
+    font-size: 11px;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-sidebar {
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #94A3B8;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.close-sidebar:hover {
+
+    background: #1E293B;
+
+    color: #F8FAFC;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.sidebar-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.nav-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    color: #CBD5E1;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-item:hover {
+
+    background: #1E293B;
+
+    color: #F8FAFC;
+
+    transform: translateX(4px);
+}
+
+
+/* ACTIVE */
+
+.nav-item.active {
+
+    background: #38BDF8;
+
+    color: #0B0F19;
+
+    font-weight: 600;
+}
+
+
+.nav-icon {
+
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOTTOM
+   ========================= */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+}
+
+
+.logout:hover {
+
+    background: rgba(239, 68, 68, 0.15);
+
+    color: #EF4444;
+}
+
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.sidebar-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 2500;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+/* SHOW OVERLAY */
+
+.sidebar-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================
+   MENU BUTTON
+   ========================= */
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #1E293B;
+    border-radius: 10px;
+    background: #0B0F19;
+    color: #F8FAFC;
+    font-size: 21px;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.25s;
+}
+
+.menu-button:hover {
+    background: #1E293B;
+    color: #38BDF8;
+    transform: scale(1.05);
+}

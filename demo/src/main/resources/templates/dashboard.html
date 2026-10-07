@@ -10,43 +10,88 @@
 </head>
 
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>
-            🚗 Transpera
-        </h2>
-        <a href="/dashboard">
-            Dashboard
-        </a>
+    <!-- Menu Button -->
+<button id="menuButton" class="menu-button">
+    ☰
+</button>
 
-        <a href="/addVehicles">
-            Add Vehicle
-        </a>
 
-        <a href="/viewVehicles">
-            View Vehicles
-        </a>
+<!-- Overlay -->
+<div id="sidebarOverlay" class="sidebar-overlay"></div>
 
-        <a href="/profile">
-            Profile
-        </a>
 
-        <a href="/logout">
-            Logout
-        </a>
+<!-- Sidebar Drawer -->
+<aside id="sidebar" class="sidebar">
+
+    <div class="sidebar-header">
+
+        <div class="brand">
+            <span class="brand-icon">🚗</span>
+
+            <div>
+                <h2>Transpera</h2>
+                <span>Vehicle Management</span>
+            </div>
+        </div>
+
+        <button id="closeSidebar" class="close-sidebar">
+            &times;
+        </button>
+
     </div>
 
+
+    <nav class="sidebar-nav">
+
+        <a href="/dashboard" class="nav-item active">
+            <span class="nav-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="#" id="openAddVehicle" class="nav-item">
+            <span class="nav-icon">＋</span>
+            <span>Add Vehicle</span>
+        </a>
+
+        <a href="/viewVehicles" class="nav-item">
+            <span class="nav-icon">🚚</span>
+            <span>Vehicles</span>
+        </a>
+
+        <a href="/profile" class="nav-item">
+            <span class="nav-icon">♙</span>
+            <span>Profile</span>
+        </a>
+
+        <a href="/settings" class="nav-item">
+            <span class="nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="/logout" class="nav-item logout">
+            <span class="nav-icon">↪</span>
+            <span>Logout</span>
+        </a>
+
+    </div>
+
+</aside>
 
     <div class="main-content">
         <div class="map-container">
             <div id="map"></div>
         </div>
-
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- Your JS -->
     <script src="/js/dashboard.js"></script>
+    <script src="/js/sidebar.js"></script>
 </body>
 
 </html>

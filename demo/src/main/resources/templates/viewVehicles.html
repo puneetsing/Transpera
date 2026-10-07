@@ -186,89 +186,44 @@
                     Fuel
 
                 </div>
-
-
                 <div class="data" th:text="${vehicle.fuelType}">
                     Petrol
                 </div>
-
-
             </div>
 
-
-
-
-
-
             <div class="info-row">
-
                 <div class="field">
-
                     <span class="icon">
                         ◴
                     </span>
-
                     Driven KM
-
                 </div>
-
-
                 <div class="data" th:text="${vehicle.drivenKM}">
                     678657
                 </div>
-
-
             </div>
-
-
-
-
-
 
             <div class="info-row">
 
-
                 <div class="field">
-
                     <span class="icon">
                         ⓘ
                     </span>
-
                     Status
-
                 </div>
-
 
                 <span class="status" th:text="${vehicle.status}">
                     Inactive
                 </span>
-
-
-
             </div>
-
-
-
         </div>
 
+        <form action="/dashboard" method="get">
 
-
-
-
-
-        <button class="details-btn">
-
-            View Details
-
-        </button>
-
-
-
-        <button class="dashboard-btn">
-
-            Dashboard
-
-        </button>
+            <button class="dashboard-btn">
+                Dashboard
+            </button>
+        </form>
 
 
 

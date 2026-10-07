@@ -22,6 +22,7 @@ public class Vehicle {
     private String fuelType;
     private String status;
     private int drivenKM;
+    private double vehiclecount; 
 
     @ManyToOne
     @JoinColumn(name = "user_id")
