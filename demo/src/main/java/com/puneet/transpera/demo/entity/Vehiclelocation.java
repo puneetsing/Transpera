@@ -1,8 +1,12 @@
 package com.puneet.transpera.demo.entity;
 import java.time.LocalDateTime;
+import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.Id;
+
+@Document(collection = "vehicle_locations")
 public class Vehiclelocation {
 
-
+    @Id 
     private Long vehicleId;
 
     private Double latitude;
