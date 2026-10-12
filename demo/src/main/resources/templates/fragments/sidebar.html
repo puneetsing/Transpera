@@ -1,82 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Pannel | CodeByGaurav</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
-    <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
 </head>
 
 <body>
-    <div th:fragment="sidebar" class="panel">
+
+<div th:fragment="sidebar" class="sidebar-wrapper">
+
+    <!-- Open button: stays visible when sidebar is closed -->
+    <button id="openSidebarBtn"
+            class="open-sidebar-btn"
+            type="button"
+            aria-label="Open sidebar"
+            aria-controls="sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar overlay -->
+    <aside id="sidebar" class="panel">
 
         <!-- Header -->
         <div class="header">
-            <h1>User Panel</h1>
-            <button class="toggle-btn" id="toggleBtn">
+            <h1>Transpera</h1>
+
+            <!-- Close button -->
+            <button class="toggle-btn"
+                    id="toggleBtn"
+                    type="button"
+                    aria-label="Close sidebar">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-        </div>
-
-        <!-- Search -->
-        <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search">
         </div>
 
         <!-- Menu -->
         <nav class="menu">
 
-            <a href="#" class="menu-item">
+            <a th:href="@{/dashboard}" class="menu-item">
                 <i class="fa-solid fa-house"></i>
                 <span>Dashboard</span>
             </a>
 
-            <a href="#" class="menu-item">
+            <a th:href="@{/profile}" class="menu-item">
                 <i class="fa-solid fa-user"></i>
                 <span>My Profile</span>
             </a>
 
             <div class="divider"></div>
 
-            <a href="#" class="menu-item">
-                <i class="fa-solid fa-folder"></i>
-                <span>Projects</span>
+            <a th:href="@{/viewVehicles}" class="menu-item">
+                <i class="fa-solid fa-truck"></i>
+                <span>Vehicles</span>
             </a>
 
-            <a href="#" class="menu-item">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>Analytics</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <i class="fa-solid fa-message"></i>
-                <span>Message</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <i class="fa-solid fa-bell"></i>
-                <span>Notifications</span>
+            <a th:href="@{/addVehicles}" class="menu-item">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Vehicles</span>
             </a>
 
             <div class="divider"></div>
 
-            <a href="#" class="menu-item">
+            <a th:href="@{/settings}" class="menu-item">
                 <i class="fa-solid fa-gear"></i>
                 <span>Settings</span>
             </a>
 
-            <a href="#" class="menu-item">
+            <!-- Keep this as a placeholder until logout is implemented -->
+            <a th:href="@{/logout}" class="menu-item">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <span>Logout</span>
             </a>
 
         </nav>
 
-    </div>
-</body>
-<script src="script.js"></script>
+    </aside>
 
+</div>
+
+</body>
 </html>
