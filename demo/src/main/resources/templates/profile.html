@@ -6,42 +6,13 @@
     <title>Profile</title>
 
     <link rel="stylesheet" href="/css/profile.css">
-    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" th:href="/css/style.css">
 
 </head>
 
 
 <body>
-
-
-    <div class="sidebar">
-
-        <h2>
-            🚗 Transpera
-        </h2>
-
-
-        <a href="/dashboard">
-            Dashboard
-        </a>
-
-
-        <a href="/addVehicles">
-            Add Vehicle
-        </a>
-
-        <a href="/viewVehicles">
-            View Vehicles
-        </a>
-
-        <a href="/profile">
-            Profile
-        </a>
-
-        <a href="/logout">
-            Logout
-        </a>
-    </div>
+    <div th:replace="fragments/sidebar :: sidebar"></div>
     <div class="main-content">
         <div class="profile-card">
             <h1>
@@ -70,13 +41,15 @@
                     </p>
 
                 </div>
-            <a href="/dashboard">
-                <button>
-                    Back to Dashboard
-                </button>
-            </a>
+                <a href="/dashboard">
+                    <button>
+                        Back to Dashboard
+                    </button>
+                </a>
+            </div>
         </div>
-    </div>
+        <script th:src="@{/js/script.js}">
+        </script>
 </body>
 
 </html>

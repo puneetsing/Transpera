@@ -1,14 +1,31 @@
-const panel = document.querySelector(".panel");
-const toggleBtn = document.getElementById("toggleBtn");
 
-toggleBtn.addEventListener("click", ()=>{
-    panel.classList.toggle("collapsed");
-    const icon = toggleBtn.querySelector("i");
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const openBtn = document.getElementById("openSidebarBtn");
+    const closeBtn = document.getElementById("toggleBtn");
 
-    if(panel.classList.contains("collapsed")){
-        icon.classList.replace("fa-xmark", "fa-bars");
-    } else{
-          icon.classList.replace("fa-bars", "fa-xmark");
+    if (!sidebar || !openBtn || !closeBtn) {
+        console.error("Sidebar elements not found:", {
+            sidebar,
+            openBtn,
+            closeBtn
+        });
+        return;
     }
 
-})
+    function openSidebar() {
+        sidebar.classList.remove("collapsed");
+        openBtn.hidden = true;
+    }
+
+    function closeSidebar() {
+        sidebar.classList.add("collapsed");
+        openBtn.hidden = false;
+    }
+
+    openBtn.addEventListener("click", openSidebar);
+    closeBtn.addEventListener("click", closeSidebar);
+
+    // Start with the sidebar open.
+    openSidebar();
+});

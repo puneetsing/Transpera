@@ -4,144 +4,12 @@
 <head>
     <title>Add Vehicle</title>
     <link rel="stylesheet" href="/css/addVehicles.css">
-    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
 </head>
 
 <body>
-<aside id="sidebar"
-       class="sidebar">
-
-
-    <!-- Sidebar Header -->
-
-    <div class="sidebar-header">
-
-        <div class="brand">
-
-            <span class="brand-icon">
-                🚗
-            </span>
-
-            <div>
-
-                <h2>
-                    Transpera
-                </h2>
-
-                <span>
-                    Vehicle Management
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <button id="closeSidebar"
-                class="close-sidebar">
-
-            &times;
-
-        </button>
-
-    </div>
-
-
-
-    <!-- Navigation -->
-
-    <nav class="sidebar-nav">
-
-
-        <a href="/dashboard"
-           class="nav-item active">
-
-            <span class="nav-icon">
-                ⌂
-            </span>
-
-            <span>
-                Dashboard
-            </span>
-
-        </a>
-
-
-
-        <a href="/addVehicles"
-           id="openAddVehicle"
-           class="nav-item">
-
-            <span class="nav-icon">
-                ＋
-            </span>
-
-            <span>
-                Add Vehicle
-            </span>
-
-        </a>
-
-
-
-        <a href="/viewVehicles"
-           class="nav-item">
-
-            <span class="nav-icon">
-                🚚
-            </span>
-
-            <span>
-                Vehicles
-            </span>
-
-        </a>
-
-
-
-        <a href="/profile"
-           class="nav-item">
-
-            <span class="nav-icon">
-                ♙
-            </span>
-
-            <span>
-                Profile
-            </span>
-
-        </a>
-
-        <a href="/settings"
-           class="nav-item">
-
-            <span class="nav-icon">
-                ⚙
-            </span>
-
-            <span>
-                Settings
-            </span>
-
-        </a>
-
-    </nav>
-
-    <div class="sidebar-bottom">
-
-        <a href="/logout"
-           class="nav-item logout">
-            <span class="nav-icon">
-                ↪
-            </span>
-            <span>
-                Logout
-            </span>
-        </a>
-    </div>
-
-</aside>
-
+<div th:replace="fragments/sidebar :: sidebar"></div>
     <div class="main-content">
 
         <div class="card">
@@ -197,7 +65,7 @@
         </div>
 
     </div>
-<script src="/js/sidebar.js"></script>
+<script th:src="@{/js/script.js}"></script>
 </body>
 
 </html>

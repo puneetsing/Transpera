@@ -6,50 +6,14 @@
     <title>My Vehicles</title>
 
     <link rel="stylesheet" th:href="@{/css/viewVehicles.css}">
-    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
 </head>
 
 
 <body>
 
-
-    <!-- Sidebar -->
-
-    <div class="sidebar">
-
-
-        <h2>
-            🚗 Transpera
-        </h2>
-
-
-        <a href="/dashboard">
-            Dashboard
-        </a>
-
-        <a href="/addVehicles">
-            Add Vehicle
-        </a>
-
-        <a href="/viewVehicles" class="active">
-            View Vehicles
-        </a>
-
-        <a href="/profile">
-            Profile
-        </a>
-
-        <a href="/logout">
-            Logout
-        </a>
-
-
-    </div>
-
-
-
-
-
+<div th:replace="fragments/sidebar :: sidebar"></div>
     <!-- Main -->
 
     <div class="main">
@@ -229,7 +193,7 @@
 
     </div>
 
-
+<script th:src="@{/js/script.js}"></script>
 </body>
 
 </html>
